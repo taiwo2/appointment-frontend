@@ -7,6 +7,7 @@ import { Provider as AlertProvider } from 'react-alert';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AlertTemplate from 'react-alert-template-basic';
 import store from './store';
+import './App.css';
 
 ReactDOM.render(
   <Provider store={store}>
