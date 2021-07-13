@@ -1,6 +1,54 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Redirect, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import Carousel from 'react-multi-carousel';
+import SocialIcons from './UI/SocialIcons';
+import 'react-multi-carousel/lib/styles.css';
+import classes from '../styles/Doctors.module.css';
+import getDoctors from '../actions/user';
 
 const Doctors = () =>{
+  const { user: currentUser } = useSelector(state => state.auth);
+  const { doctors } = useSelector(state => state.user);
+  const { message } = useSelector(state => state.message);
+  const [loading, setLoading] = useState(false);
+  const [successful, setSuccessful] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (doctors.length === 0 && currentUser) {
+      setLoading(true);
+      dispatch(getDoctors())
+        .then(() => {
+          setSuccessful(true);
+          setLoading(false);
+        })
+        .catch(() => {
+          setLoading(false);
+        });
+    }
+  }, [doctors, dispatch]);
+
+  if (!currentUser) {
+    return <Redirect to="/login" />;
+  }
+
+  const doctorsList = doctors.map(doctor => (
+    <div key={doctor.id}>
+      <Link to={`/doctors/${doctor.id}`} className={classes.Doctors}>
+        <div className="d-flex flex-column align-items-center">
+          <img src={doctor.image} alt={doctor.name} className={`rounded-circle ${classes.img}`} />
+          <h5 className={`text-dark p-4 ${classes.border}`}>{doctor.name}</h5>
+          <p className="text-secondary mt-3">
+            <strong>Qualification:&nbsp;</strong>
+            {doctor.qualification}
+          </p>
+        </div>
+      </Link>
+      <SocialIcons />
+    </div>
+  ));
+
   return (
     <div className="container text-center">
       <div>
