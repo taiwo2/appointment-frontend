@@ -27,13 +27,25 @@ export default function auth(state = initialState, action) {
         ...state,
         isLoggedIn: false,
       };
-    case LOGIN_SUCCESS:
-      return {
-        ...state,
-        isLoggedIn: true,
-        user: payload.user,
-      };
-    default:
-      return state;
-  }
+      case LOGIN_SUCCESS:
+        return {
+          ...state,
+          isLoggedIn: true,
+          user: payload.user,
+        };
+      case LOGIN_FAIL:
+        return {
+          ...state,
+          isLoggedIn: false,
+          user: null,
+        };
+      case LOGOUT:
+        return {
+          ...state,
+          isLoggedIn: false,
+          user: null,
+        };
+      default:
+        return state;
+    }
 }

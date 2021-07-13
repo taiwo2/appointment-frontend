@@ -1,6 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import SocialIcons from './UI/SocialIcons';
+import { logout } from '../actions/auth';
+import logo from '../assets/images/logo.png';
+import classes from '../styles/Sidebar.module.css';
 
-const SideBar = ()  =>{
+const SideBar = ()  => {
+  const { user: currentUser } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+
+  const logOut = () => {
+    dispatch(logout());
+  };
+
+  const toggleMenu = () => {
+    const navMenu = document.querySelector('nav');
+    navMenu.classList.toggle(classes.toggle);
+  };
+
   return (
     <div>
       <button type="button" className={classes.hamburger} onClick={toggleMenu}>
