@@ -19,6 +19,12 @@ import NewAppointment from './components/NewAppointment';
 import { clearMessage } from './actions/message';
 
 function App() {
+  const dispatch = useDispatch();
+  const location = useLocation();
+  useEffect(() => {
+    dispatch(clearMessage()); // clear message when changing location
+  }, [dispatch, location]);
+  
   return (
     <div className="App">
       <Sidebar />
