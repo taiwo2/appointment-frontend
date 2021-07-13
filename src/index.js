@@ -4,6 +4,9 @@ import App from './components/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { Provider as AlertProvider } from 'react-alert';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AlertTemplate from 'react-alert-template-basic';
+import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
