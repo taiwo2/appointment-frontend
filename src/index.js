@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import App from './components/App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { Provider as AlertProvider } from 'react-alert';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Router>
+      <AlertProvider template={AlertTemplate}>
+        <App />
+      </AlertProvider>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
