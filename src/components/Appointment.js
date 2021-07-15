@@ -10,13 +10,11 @@ const Appointment = () => {
   const [loading, setLoading] = useState(true);
   const [successful, setSuccessful] = useState(false);
   const [error, setError] = useState(false);
+  const { id } = useParams();
   const { user: currentUser } = useSelector(state => state.auth);
   const alert = useAlert();
-  if (!currentUser) {
-    return <Redirect to="/login" />;
-  }
+ 
 
-  const { id } = useParams();
   useEffect(() => {
     UserService.getAppointment(currentUser.user.id, id).then(
       response => {
@@ -52,6 +50,10 @@ const Appointment = () => {
       setSuccessful(true);
     });
   };
+
+  if (!currentUser) {
+    return <Redirect to="/login" />;
+  }
 
   if (successful) {
     return <Redirect to="/appointments" />;

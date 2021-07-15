@@ -8,11 +8,8 @@ const Doctor = () =>{
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const { user: currentUser } = useSelector(state => state.auth);
-
-  if (!currentUser) {
-    return <Redirect to="/login" />;
-  }
   const { id } = useParams();
+  
   useEffect(() => {
     UserService.getDoctor(id).then(
       response => {
@@ -32,6 +29,10 @@ const Doctor = () =>{
     );
   }, []);
 
+  if (!currentUser) {
+    return <Redirect to="/login" />;
+  }
+  
   return (
     <div className="container">
       <div className="text-center">
