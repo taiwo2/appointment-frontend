@@ -1,3 +1,5 @@
+// "jsx-a11y/label-has-associated-control": "off"
+
 import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -94,8 +96,7 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-          <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
-
+           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control  */}
             <label htmlFor="password">Password</label>
             <Input
               type="password"

@@ -14,7 +14,7 @@ const Profile = () => {
       <h3>
         <strong>{currentUser.user.name}</strong>
         {' '}
-         Profile
+        Profile
       </h3>
       <p>
         <strong>Token:</strong>
