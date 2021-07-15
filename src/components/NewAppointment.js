@@ -111,7 +111,8 @@ const NewAppointment = ({ location }) => {
           {!successful && (
             <div>
               <div className="form-group">
-                <label>Appointment Date</label>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control  */}
+                <label htmlFor="appointmentDate">Appointment Date</label>
                 <Input
                   type="datetime-local"
                   className="form-control"
@@ -122,6 +123,7 @@ const NewAppointment = ({ location }) => {
                 />
               </div>
               <div className="form-group">
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control  */}
                 <label htmlFor="doctorId">Select list:</label>
                 <select className="form-control" id="doctorId" onChange={onChangDoctorId} value={doctorId}>
                   {loadingDoctors ? <option>Loading..</option> : options }

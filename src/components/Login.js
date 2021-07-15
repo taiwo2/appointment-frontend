@@ -84,6 +84,7 @@ const Login = () => {
 
         <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control  */}
             <label htmlFor="email">Email</label>
             <Input
               type="text"
@@ -96,7 +97,7 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control  */}
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control  */}
             <label htmlFor="password">Password</label>
             <Input
               type="password"
