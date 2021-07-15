@@ -9,8 +9,8 @@ const Home = () => (
         <h2> BOOK AN APPOINTMENT NOW ! </h2>
         <div className="d-flex mt-3">
           <select className={`${classes.Select} ${classes.Button} mr-4`}>
-            <option> New Delhi</option>
-            <option> Hyderabad</option>
+            <option> Lagos</option>
+            <option> Abuja</option>
           </select>
           <Link to="/appointments/new" className={classes.Button}>
             Add Appointment
