@@ -66,7 +66,7 @@ const Appointments = () => {
       <h3>Appointments</h3>
       {loading && <span className="spinner-border spinner-border-lg" />}
       <div className="d-flex flex-wrap">
-      {appointments}
+        {appointments}
       </div>
     </div>
   );

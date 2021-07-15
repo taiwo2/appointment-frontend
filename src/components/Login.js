@@ -82,7 +82,7 @@ const Login = () => {
 
         <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
-            <label>Email</label>
+            <label htmlFor="email">Email</label>
             <Input
               type="text"
               className="form-control"
@@ -94,7 +94,9 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-            <label>Password</label>
+          <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
+
+            <label htmlFor="password">Password</label>
             <Input
               type="password"
               className="form-control"
