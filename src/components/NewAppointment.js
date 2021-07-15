@@ -111,7 +111,7 @@ const NewAppointment = ({ location }) => {
           {!successful && (
             <div>
               <div className="form-group">
-                <label htmlFor="appointmentDate">Appointment Date</label>
+                <label>Appointment Date</label>
                 <Input
                   type="datetime-local"
                   className="form-control"

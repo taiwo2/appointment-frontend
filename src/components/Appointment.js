@@ -13,7 +13,6 @@ const Appointment = () => {
   const { id } = useParams();
   const { user: currentUser } = useSelector((state) => state.auth);
   const alert = useAlert();
- 
 
   useEffect(() => {
     UserService.getAppointment(currentUser.user.id, id).then(
@@ -62,8 +61,8 @@ const Appointment = () => {
     <div className="container">
       <header className="jumbotron">
          {loading && <span className="spinner-border spinner-border-lg" />}
-         {
-          doctor && (
+        {
+        doctor && (
           <div>
             <p>
               Appointment Id: &nbsp;
@@ -85,9 +84,9 @@ const Appointment = () => {
           </div>
           )
         }
-         {
-          error && <p>{content}</p>
-         }
+        {
+        error && <p>{content}</p>
+        }
       </header>
 
     </div>

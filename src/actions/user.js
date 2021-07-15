@@ -6,7 +6,7 @@ import {
 
 import UserService from '../services/user.service';
 
-export default () => (dispatc) => UserService.getDoctors().then(
+export default () => (dispatch) => UserService.getDoctors().then(
   (response) => {
     dispatch({
       type: DOCTORS_SUCCESS,
