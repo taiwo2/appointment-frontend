@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     dispatch(clearMessage()); // clear message when changing location
   }, [dispatch, location]);
-  
+
   return (
     <div className="App">
       <Sidebar />

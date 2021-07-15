@@ -3,20 +3,20 @@ import { Redirect, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import UserService from '../services/user.service';
 
-const Appointments = () =>{
+const Appointments = () => {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
-  const { user: currentUser } = useSelector(state => state.auth);
+  const { user: currentUser } = useSelector((state) => state.auth);
   let appointments;
 
   useEffect(() => {
     if (currentUser) {
       UserService.getAppointments(currentUser.user.id).then(
-        response => {
+        (response) => {
           setLoading(false);
           setContent(response.data);
         },
-        error => {
+        (error) => {
           setLoading(false);
           const message = (error.response
               && error.response.data
@@ -43,7 +43,7 @@ const Appointments = () =>{
       </h4>
     );
   } else {
-    appointments = content && content.map(appointment => {
+    appointments = content && content.map((appointment) => {
       const d = new Date(appointment.appointment_date);
       const date = d.toUTCString();
       return (
@@ -62,14 +62,14 @@ const Appointments = () =>{
   }
 
   return (
-   <div className="container text-center">
-      <h3>Appointments</h3>
-      {loading && <span className="spinner-border spinner-border-lg" />}
-      <div className="d-flex flex-wrap">
+    <div className="container text-center">
+     <h3>Appointments</h3>
+     {loading && <span className="spinner-border spinner-border-lg" />}
+     <div className="d-flex flex-wrap">
         {appointments}
-      </div>
+     </div>
     </div>
-  )
-}
+  );
+};
 
-export default Appointments
+export default Appointments;

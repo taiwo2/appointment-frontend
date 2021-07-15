@@ -6,8 +6,8 @@ import {
 
 import UserService from '../services/user.service';
 
-export default () => dispatch => UserService.getDoctors().then(
-  response => {
+export default () => (dispatc) => UserService.getDoctors().then(
+  (response) => {
     dispatch({
       type: DOCTORS_SUCCESS,
       payload: { doctors: response.data },
@@ -20,7 +20,7 @@ export default () => dispatch => UserService.getDoctors().then(
 
     return Promise.resolve();
   },
-  error => {
+  (error) => {
     const message = (error.response
           && error.response.data
           && error.response.data.message)

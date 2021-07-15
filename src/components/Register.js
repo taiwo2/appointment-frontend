@@ -8,7 +8,7 @@ import { isEmail } from 'validator';
 import { useAlert } from 'react-alert';
 import { register } from '../actions/auth';
 
-const required = value => {
+const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -19,7 +19,7 @@ const required = value => {
   return null;
 };
 
-const validEmail = value => {
+const validEmail = (value) => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -30,7 +30,7 @@ const validEmail = value => {
   return null;
 };
 
-const vname = value => {
+const vname = (value) => {
   if (value.length < 3 || value.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -41,7 +41,7 @@ const vname = value => {
   return null;
 };
 
-const vpassword = value => {
+const vpassword = (value) => {
   if (value.length < 6 || value.length > 40) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -62,25 +62,25 @@ const Register = () => {
   const [successful, setSuccessful] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { message } = useSelector(state => state.message);
+  const { message } = useSelector((state) => state.message);
   const dispatch = useDispatch();
   const alert = useAlert();
-  const onChangeName = e => {
+  const onChangeName = (e) => {
     const name = e.target.value;
     setName(name);
   };
 
-  const onChangeEmail = e => {
+  const onChangeEmail = (e) => {
     const email = e.target.value;
     setEmail(email);
   };
 
-  const onChangePassword = e => {
+  const onChangePassword = (e) => {
     const password = e.target.value;
     setPassword(password);
   };
 
-  const handleRegister = e => {
+  const handleRegister = (e) => {
     e.preventDefault();
     setLoading(true);
     setSuccessful(false);
@@ -128,6 +128,7 @@ const Register = () => {
                   type="text"
                   className="form-control"
                   name="name"
+                  id="name"
                   value={name}
                   onChange={onChangeName}
                   validations={[required, vname]}
@@ -140,6 +141,7 @@ const Register = () => {
                   type="text"
                   className="form-control"
                   name="email"
+                  id="email"
                   value={email}
                   onChange={onChangeEmail}
                   validations={[required, validEmail]}
@@ -180,7 +182,7 @@ const Register = () => {
         </Form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

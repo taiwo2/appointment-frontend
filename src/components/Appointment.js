@@ -11,17 +11,17 @@ const Appointment = () => {
   const [successful, setSuccessful] = useState(false);
   const [error, setError] = useState(false);
   const { id } = useParams();
-  const { user: currentUser } = useSelector(state => state.auth);
+  const { user: currentUser } = useSelector((state) => state.auth);
   const alert = useAlert();
  
 
   useEffect(() => {
     UserService.getAppointment(currentUser.user.id, id).then(
-      response => {
+      (response) => {
         setContent(response.data);
         return response.data.doctor_id;
       },
-      error => {
+      (error) => {
         setLoading(false);
         setError(true);
         const message = (error.response
@@ -32,8 +32,8 @@ const Appointment = () => {
 
         setContent(message);
       },
-    ).then(doctorId => UserService.getDoctor(doctorId))
-      .then(response => {
+    ).then((doctorId) => UserService.getDoctor(doctorId))
+      .then((response) => {
         setLoading(false);
         setDoctor(response.data);
       });
@@ -60,9 +60,9 @@ const Appointment = () => {
   }
   return (
     <div className="container">
-       <header className="jumbotron">
-        {loading && <span className="spinner-border spinner-border-lg" />}
-        {
+      <header className="jumbotron">
+         {loading && <span className="spinner-border spinner-border-lg" />}
+         {
           doctor && (
           <div>
             <p>
@@ -85,13 +85,13 @@ const Appointment = () => {
           </div>
           )
         }
-        {
+         {
           error && <p>{content}</p>
-        }
+         }
       </header>
-      
-    </div>
-  )
-}
 
-export default Appointment
+    </div>
+  );
+};
+
+export default Appointment;

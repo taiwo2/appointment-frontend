@@ -7,10 +7,10 @@ import 'react-multi-carousel/lib/styles.css';
 import classes from '../styles/Doctors.module.css';
 import getDoctors from '../actions/user';
 
-const Doctors = () =>{
-  const { user: currentUser } = useSelector(state => state.auth);
-  const { doctors } = useSelector(state => state.user);
-  const { message } = useSelector(state => state.message);
+const Doctors = () => {
+  const { user: currentUser } = useSelector((state) => state.auth);
+  const { doctors } = useSelector((state) => state.user);
+  const { message } = useSelector((state) => state.message);
   const [loading, setLoading] = useState(false);
   const [successful, setSuccessful] = useState(false);
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const Doctors = () =>{
     return <Redirect to="/login" />;
   }
 
-  const doctorsList = doctors.map(doctor => (
+  const doctorsList = doctors.map((doctor) => (
     <div key={doctor.id}>
       <Link to={`/doctors/${doctor.id}`} className={classes.Doctors}>
         <div className="d-flex flex-column align-items-center">
@@ -113,7 +113,7 @@ const Doctors = () =>{
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Doctors
+export default Doctors;

@@ -10,7 +10,7 @@ import userService from '../services/user.service';
 import { setMessage } from '../actions/message';
 import getDoctors from '../actions/user';
 
-const required = value => {
+const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -24,14 +24,14 @@ const required = value => {
 const NewAppointment = ({ location }) => {
   const form = useRef();
   const checkBtn = useRef();
-  const { user: currentUser } = useSelector(state => state.auth);
+  const { user: currentUser } = useSelector((state) => state.auth);
   const [doctorId, setDoctorId] = useState('');
   const [appointmentDate, setAppointmentDate] = useState('');
   const [successful, setSuccessful] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingDoctors, setLoadingDoctors] = useState(false);
-  const { message } = useSelector(state => state.message);
-  const { doctors } = useSelector(state => state.user);
+  const { message } = useSelector((state) => state.message);
+  const { doctors } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const alert = useAlert();
   useEffect(() => {
@@ -52,17 +52,17 @@ const NewAppointment = ({ location }) => {
     }
   }, [doctors, dispatch]);
 
-  const onChangDoctorId = e => {
+  const onChangDoctorId = (e) => {
     const doctorId = e.target.value;
     setDoctorId(doctorId);
   };
 
-  const onChangAppointmentDate = e => {
+  const onChangAppointmentDate = (e) => {
     const appointmentDate = e.target.value;
     setAppointmentDate(appointmentDate);
   };
 
-  const handleRegister = e => {
+  const handleRegister = (e) => {
     e.preventDefault();
     setLoading(true);
     setSuccessful(false);
@@ -89,7 +89,7 @@ const NewAppointment = ({ location }) => {
       setLoading(false);
     }
   };
-  const options = doctors.map(doctor => (
+  const options = doctors.map((doctor) => (
     <option
       key={doctor.id}
       value={doctor.id}

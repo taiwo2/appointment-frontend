@@ -8,8 +8,8 @@ import { logout } from '../actions/auth';
 import logo from '../assets/images/logo.png';
 import classes from '../styles/Sidebar.module.css';
 
-const Sidebar = ()  => {
-  const { user: currentUser } = useSelector(state => state.auth);
+const Sidebar = () => {
+  const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   const logOut = () => {
@@ -79,7 +79,7 @@ const Sidebar = ()  => {
         </footer>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

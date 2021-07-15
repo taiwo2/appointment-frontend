@@ -8,7 +8,7 @@ import CheckButton from 'react-validation/build/button';
 
 import { login } from '../actions/auth';
 
-const required = value => {
+const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -19,7 +19,7 @@ const required = value => {
   return '';
 };
 
-const Login = () =>{
+const Login = () => {
   const form = useRef();
   const checkBtn = useRef();
 
@@ -27,22 +27,22 @@ const Login = () =>{
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const { isLoggedIn } = useSelector(state => state.auth);
-  const { message } = useSelector(state => state.message);
+  const { isLoggedIn } = useSelector((state) => state.auth);
+  const { message } = useSelector((state) => state.message);
   const alert = useAlert();
   const dispatch = useDispatch();
 
-  const onChangeEmail = e => {
+  const onChangeEmail = (e) => {
     const email = e.target.value;
     setEmail(email);
   };
 
-  const onChangePassword = e => {
+  const onChangePassword = (e) => {
     const password = e.target.value;
     setPassword(password);
   };
 
-  const handleLogin = e => {
+  const handleLogin = (e) => {
     e.preventDefault();
 
     setLoading(true);
@@ -126,7 +126,7 @@ const Login = () =>{
         </Form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

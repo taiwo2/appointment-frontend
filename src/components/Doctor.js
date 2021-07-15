@@ -4,19 +4,19 @@ import { useSelector } from 'react-redux';
 import UserService from '../services/user.service';
 import classes from '../styles/Doctor.module.css';
 
-const Doctor = () =>{
+const Doctor = () => {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
-  const { user: currentUser } = useSelector(state => state.auth);
+  const { user: currentUser } = useSelector((state) => state.auth);
   const { id } = useParams();
-  
+
   useEffect(() => {
     UserService.getDoctor(id).then(
-      response => {
+      (response) => {
         setLoading(false);
         setContent(response.data);
       },
-      error => {
+      (error) => {
         setLoading(false);
         const message = (error.response
             && error.response.data
@@ -32,7 +32,7 @@ const Doctor = () =>{
   if (!currentUser) {
     return <Redirect to="/login" />;
   }
-  
+
   return (
     <div className="container">
       <div className="text-center">
@@ -73,7 +73,7 @@ const Doctor = () =>{
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Doctor
+export default Doctor;

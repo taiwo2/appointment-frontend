@@ -11,8 +11,8 @@ import {
 import AuthService from '../services/auth.service';
 
 // eslint-disable-next-line max-len
-export const register = (name, email, password) => dispatch => AuthService.register(name, email, password).then(
-  response => {
+export const register = (name, email, password) => (dispatch) => AuthService.register(name, email, password).then(
+  (response) => {
     dispatch({
       type: REGISTER_SUCCESS,
       payload: { user: response.data },
@@ -25,7 +25,7 @@ export const register = (name, email, password) => dispatch => AuthService.regis
 
     return Promise.resolve();
   },
-  error => {
+  (error) => {
     console.log(error.response);
     const message = (error.response
           && error.response.data
@@ -46,8 +46,8 @@ export const register = (name, email, password) => dispatch => AuthService.regis
   },
 );
 
-export const login = (email, password) => dispatch => AuthService.login(email, password).then(
-  data => {
+export const login = (email, password) => (dispatch) => AuthService.login(email, password).then(
+  (data) => {
     dispatch({
       type: LOGIN_SUCCESS,
       payload: { user: data },
@@ -55,7 +55,7 @@ export const login = (email, password) => dispatch => AuthService.login(email, p
 
     return Promise.resolve();
   },
-  error => {
+  (error) => {
     const message = (error.response
           && error.response.data
           && error.response.data.message)
@@ -75,7 +75,7 @@ export const login = (email, password) => dispatch => AuthService.login(email, p
   },
 );
 
-export const logout = () => dispatch => {
+export const logout = () => (dispatch) => {
   AuthService.logout();
 
   dispatch({
