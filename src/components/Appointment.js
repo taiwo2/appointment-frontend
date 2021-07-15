@@ -60,7 +60,7 @@ const Appointment = () => {
   return (
     <div className="container">
       <header className="jumbotron">
-         {loading && <span className="spinner-border spinner-border-lg" />}
+        {loading && <span className="spinner-border spinner-border-lg" />}
         {
         doctor && (
           <div>
@@ -82,7 +82,7 @@ const Appointment = () => {
               Delete
             </button>
           </div>
-          )
+        )
         }
         {
         error && <p>{content}</p>
