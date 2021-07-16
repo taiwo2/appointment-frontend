@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'https://git.heroku.com/sensationnel-monsieur-19779.git/';
+const API_URL = 'https://murmuring-dawn-23667.herokuapp.com/';
 
 const getDoctors = () => axios.get(`${API_URL}api/v1/doctors`, { headers: authHeader() });
 const getDoctor = (id) => axios.get(`${API_URL}api/v1/doctors/${id}`, { headers: authHeader() });

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://git.heroku.com/sensationnel-monsieur-19779.git/';
+const API_URL = 'https://murmuring-dawn-23667.herokuapp.com/';
 
 const register = (name, email, password) => axios.post(`${API_URL}api/v1/users`, {
   name,
