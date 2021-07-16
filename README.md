@@ -4,7 +4,7 @@
   <p align="center">A react-redux single page responsive application, where user can see the details of doctors of ABC Hospital and book an appointment with the doctor. A user needs to sign up and login to book/delete an appointment.</p>
   # Screenshot
 
-* ![Home](./assets/images/hospital.png)
+* ![Home](./hospital.png)
 
 
 <!-- TABLE OF CONTENTS -->
