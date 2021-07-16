@@ -1,8 +1,8 @@
 <p align="center">
 
-  <h2 align="center">ABC Hospital</h2>
-  <p align="center">A react-redux single page responsive application, where user can see the details of doctors of ABC Hospital and book an appointment with the doctor. A user needs to sign up and login to book/delete an appointment.</p>
-  # Screenshot
+  <h2 align="center">BHAKTI HUSADA Hospital</h2>
+  <p align="center">A react-redux single page responsive application, where user can see the details of doctors of BHAKTI HUSADA Hospital and book an appointment with the doctor. A user needs to sign up and login to book/delete an appointment.</p>
+
 
 * ![Home](./hospital.png)
 
