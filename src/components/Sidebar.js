@@ -75,7 +75,7 @@ const Sidebar = () => {
         )}
         <footer className={classes.social}>
           <SocialIcons />
-          <p>&copy;2020, ABC Hospital</p>
+          <p>&copy;2020, BH Hospital</p>
         </footer>
       </nav>
     </div>

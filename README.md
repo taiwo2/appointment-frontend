@@ -1,26 +1,12 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
+<p align="center">
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+  <h2 align="center">ABC Hospital</h2>
+  <p align="center">A react-redux single page responsive application, where user can see the details of doctors of ABC Hospital and book an appointment with the doctor. A user needs to sign up and login to book/delete an appointment.</p>
+  # Screenshot
 
-<!-- PROJECT LOGO -->
+* ![Home](./assets/images/hospital.png)
 
-<br />
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -40,14 +26,14 @@
 In this project I have developed a single page application for a Hospital with react and redux libraries. App name is ABC Hospital. A user can sign up/login to see the details of doctors and book an appointment.
 
 App uses react router to route to different components. 
-Backend APIs are developed with Ruby on Rails. [Click here](https://github.com/alishabab/appointment-booking-backend) to see backend project details.
+Backend APIs are developed with Ruby on Rails. [Click here](https://github.com/taiwo2/appointment-backend.git) to see backend project details.
 
 
 <!-- Live Link  -->
 
 ## Live Link
 
-[Click here](https://glacial-peak-60683.herokuapp.com/) to see live version
+[Click here](https://shrouded-castle-38938.herokuapp.com/) to see live version
 
 <!-- INSTALLATION -->
 
@@ -57,12 +43,11 @@ To run the app locally, clone the repository, navigate to it's directory.
 
 #### Follow these commands step by step:-
 
-```bash
+
 git clone https://github.com/taiwo2/appointment-frontend.git
 cd appointment-booking-frontend
 npm install
 npm start
-```
 
 Now go to [localhost:3000](http://localhost:3000) in your browser.
 
