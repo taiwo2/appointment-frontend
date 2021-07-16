@@ -1,5 +1,5 @@
 
-  <h2>BHAKTI HUSADA Hospital</h2>
+  <h2 align="center">BHAKTI HUSADA Hospital</h2>
   <p>A react-redux single page responsive application, where user can see the details of doctors of BHAKTI HUSADA Hospital and book an appointment with the doctor. A user needs to sign up and login to book/delete an appointment.</p>
 
 
