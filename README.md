@@ -108,6 +108,12 @@ To run unit test run `npm test` in root directory.
 
 <!-- acknowledgments -->
 
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
 ## Acknowledgments
 
 - [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for design
@@ -116,17 +122,6 @@ To run unit test run `npm test` in root directory.
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/alishabab/appointment-booking-frontend.svg?style=flat-square
-[contributors-url]: https://github.com/alishabab/appointment-booking-frontend/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alishabab/appointment-booking-frontend.svg?style=flat-square
-[forks-url]: https://github.com/alishabab/appointment-booking-frontend/network/members
-[stars-shield]: https://img.shields.io/github/stars/alishabab/appointment-booking-frontend.svg?style=flat-square
-[stars-url]: https://github.com/alishabab/appointment-booking-frontend/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alishabab/appointment-booking-frontend.svg?style=flat-square
-[issues-url]: https://github.com/alishabab/appointment-booking-frontend/issues
 
 ## 📝 License
 
