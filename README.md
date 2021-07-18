@@ -32,7 +32,7 @@ Backend APIs are developed with Ruby on Rails. [Click here](https://github.com/t
 
 ## Live Link
 
-[Click here](https://shrouded-castle-38938.herokuapp.com/) to see live version
+[Click here](https://sleepy-ocean-62491.herokuapp.com/) to see live version
 
 <!-- INSTALLATION -->
 
