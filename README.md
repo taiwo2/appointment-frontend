@@ -43,7 +43,7 @@ To run the app locally, clone the repository, navigate to it's directory.
 #### Follow these commands step by step:-
 
 
-git clone https://github.com/taiwo2/appointment-frontend.git <br>
+git clone `https://github.com/taiwo2/appointment-frontend.git `<br>
 
 cd appointment-booking-frontend <br>
 
