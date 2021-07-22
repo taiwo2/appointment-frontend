@@ -32,11 +32,12 @@ describe('itemDetailedView test', () => {
     /* eslint-enable */
 
     const header = (
-      <select 
+      <select
         className="form-control"
         id="doctorId"
         onChange={onChangDoctorId}
-        value={doctorId}>
+        value={doctorId}
+      >
         {loadingDoctors ? <option>Loading..</option> : options }
       </select>
     );
