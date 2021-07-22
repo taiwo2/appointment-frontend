@@ -35,6 +35,6 @@ describe('itemDetailedView test', () => {
         <span>Sign Up</span>
       </button>
     );
-  expect(wrapper.contains(header)).toBeDefined();
+    expect(wrapper.contains(header)).toBeDefined();
   });
 });

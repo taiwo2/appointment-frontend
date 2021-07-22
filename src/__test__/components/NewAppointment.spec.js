@@ -18,18 +18,25 @@ describe('itemDetailedView test', () => {
   });
 
   it('renders link to create appointment', () => {
-        /* eslint-enable */
+
+     /* eslint-enable */
+
     let doctorId;
     let loadingDoctors;
     let options;
+    let setDoctorId;
     const onChangDoctorId = (e) => {
       const doctorId = e.target.value;
       setDoctorId(doctorId);
     };
-        /* eslint-enable */
+
+    /* eslint-enable */
+
     const header = ( 
-      <select className="form-control" id="doctorId" 
-        onChange={onChangDoctorId} value={doctorId}>
+      <select className="form-control"
+        id="doctorId"
+        onChange={onChangDoctorId}
+        value={doctorId}>
         {loadingDoctors ? <option>Loading..</option> : options }
       </select>
     );

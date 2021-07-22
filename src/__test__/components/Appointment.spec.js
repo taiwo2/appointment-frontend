@@ -43,9 +43,11 @@ describe('itemDetailedView test', () => {
 
     /* eslint-enable */
 
-    const header = ( <button className="btn btn-primary btn-block" type="button" onClick={handleClick} disabled={loading}>
-    Delete
-  </button>);
+    const header = ( 
+      <button className="btn btn-primary btn-block" type="button" onClick={handleClick} disabled={loading}>
+        Delete
+      </button>
+    );
     expect(wrapper.contains(header)).toBeDefined();
   });
 });

@@ -1,11 +1,9 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import Doctors from '../../components/Doctors';
 import Adapter from 'enzyme-adapter-react-16';
-
 import { shallow, configure } from 'enzyme';
 import { Provider } from 'react-redux';
-import store from '../../store'
+import Doctors from '../../components/Doctors';
+import store from '../../store';
 
 configure({ adapter: new Adapter()});
 describe('itemDetailedView test', () => {
