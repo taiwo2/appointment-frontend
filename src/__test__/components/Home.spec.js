@@ -1,7 +1,10 @@
-import { shallow } from 'enzyme';
+// import { shallow } from 'enzyme';
 import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
+import { shallow, configure } from 'enzyme';
 import Home from '../../components/Home';
 
+configure({adapter: new Adapter()});
 describe('itemDetailedView test', () => {
   let wrapper;
 
