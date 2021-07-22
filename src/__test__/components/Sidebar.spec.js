@@ -5,16 +5,15 @@ import { Provider } from 'react-redux';
 import store from '../../store';
 import Sidebar from '../../components/Sidebar';
 
-
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 describe('itemDetailedView test', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
       <Provider store={store}>
-      <Sidebar />
-    </Provider>,
+        <Sidebar />
+      </Provider>,
     );
   });
 

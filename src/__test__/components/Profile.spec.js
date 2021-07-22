@@ -1,21 +1,20 @@
-// import { shallow } from 'enzyme';
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
-import Profile from '../../components/Profile';
 import { Provider } from 'react-redux';
+import Profile from '../../components/Profile';
 import store from '../../store';
 
 
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 describe('itemDetailedView test', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
       <Provider store={store}>
-      <Profile />
-    </Provider>,
+        <Profile />
+      </Provider>,
     );
   });
 

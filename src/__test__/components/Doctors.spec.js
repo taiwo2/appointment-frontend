@@ -7,9 +7,7 @@ import { shallow, configure } from 'enzyme';
 import { Provider } from 'react-redux';
 import store from '../../store'
 
-configure({adapter: new Adapter()});
-
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter()});
 describe('itemDetailedView test', () => {
   let wrapper;
 
@@ -21,14 +19,12 @@ describe('itemDetailedView test', () => {
     );
   });
 
-
-it('renders link to create appointment', () => {
-  const header = (<p className="text-secondary">Please select a doctor to view details</p>);
-  expect(wrapper.contains(header)).toEqual(false);
-});
-it('renders link to create appointment', () => {
-  const header = (<h3>LIST OF DOCTORS</h3>);
-  expect(wrapper.contains(header)).toBeFalsy();
-});
-
+  it('renders link to create appointment', () => {
+    const header = (<p className="text-secondary">Please select a doctor to view details</p>);
+    expect(wrapper.contains(header)).toEqual(false);
+  });
+  it('renders link to create appointment', () => {
+    const header = (<h3>LIST OF DOCTORS</h3>);
+    expect(wrapper.contains(header)).toBeFalsy();
+  });
 });

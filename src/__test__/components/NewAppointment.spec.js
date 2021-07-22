@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import { Provider } from 'react-redux';
-import store from '../../store'
+import store from '../../store';
 import NewAppointment from '../../components/Appointments';
 
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 describe('itemDetailedView test', () => {
   let wrapper;
 
@@ -17,8 +17,8 @@ describe('itemDetailedView test', () => {
     );
   });
 
-
   it('renders link to create appointment', () => {
+        /* eslint-enable */
     let doctorId;
     let loadingDoctors;
     let options;
@@ -26,10 +26,13 @@ describe('itemDetailedView test', () => {
       const doctorId = e.target.value;
       setDoctorId(doctorId);
     };
-    const header = ( <select className="form-control" id="doctorId" 
-    onChange={onChangDoctorId} value={doctorId}>
-    {loadingDoctors ? <option>Loading..</option> : options }
-  </select>);
+        /* eslint-enable */
+    const header = ( 
+      <select className="form-control" id="doctorId" 
+        onChange={onChangDoctorId} value={doctorId}>
+        {loadingDoctors ? <option>Loading..</option> : options }
+      </select>
+    );
     expect(wrapper.contains(header)).toBeDefined();
   });
   it('renders link to create appointment', () => {

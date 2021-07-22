@@ -1,24 +1,23 @@
-// import { shallow } from 'enzyme';
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
-import { Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../store';
 import Doctor from '../../components/Doctor';
 
-
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 describe('itemDetailedView test', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
       <Provider store={store}>
-      <Doctor />
-    </Provider>,
+        <Doctor />
+      </Provider>,
     );
   });
+
+  /* eslint-disable */
 
   it('renders 2 location options', () => {
     expect(wrapper.find('div')).toBeTruthy();
@@ -41,15 +40,12 @@ describe('itemDetailedView test', () => {
         setSuccessful(true);
       });
     };
+
+    /* eslint-enable */
+
     const header = ( <button className="btn btn-primary btn-block" type="button" onClick={handleClick} disabled={loading}>
     Delete
-  </button>)
-  expect(wrapper.contains(header)).toBeDefined();
-
+  </button>);
+    expect(wrapper.contains(header)).toBeDefined();
   });
-  // it('should render button', () => {
-  //   const classList  = wrapper.find('#container');
-  //   expect(classList).toHaveLength(0);
-  //   expect(classList.text()).toEqual('Add Appointment');
-  // })
 });
