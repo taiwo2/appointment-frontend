@@ -43,7 +43,7 @@ describe('itemDetailedView test', () => {
 
     /* eslint-enable */
 
-    const header = ( 
+    const header = (
       <button className="btn btn-primary btn-block" type="button" onClick={handleClick} disabled={loading}>
         Delete
       </button>

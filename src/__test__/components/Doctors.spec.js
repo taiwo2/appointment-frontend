@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import Doctors from '../../components/Doctors';
 import store from '../../store';
 
-configure({ adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 describe('itemDetailedView test', () => {
   let wrapper;
 
