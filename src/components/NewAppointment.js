@@ -121,6 +121,7 @@ const NewAppointment = ({ location }) => {
                   value={appointmentDate}
                   onChange={onChangAppointmentDate}
                   validations={[required]}
+                  min={new Date().toISOString().substring(0, 16)}
                 />
               </div>
               <div className="form-group">
