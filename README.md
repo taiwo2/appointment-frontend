@@ -1,70 +1,128 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h2 align="center">BHAKTI HUSADA Hospital</h2>
+  <p>A react-redux single page responsive application, where user can see the details of doctors of BHAKTI HUSADA Hospital and book an appointment with the doctor. A user needs to sign up and login to book/delete an appointment.</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+* ![Home](./hospital.png)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [About the Project](#about-the-project)
+* [Installation](#installation)
+* [Test](#test)
+* [Live Link](#Live-Link)
+* [Built With](#built-with)
+* [Nice to have features](#nice-to-have-features)
+* [Potential Future Updates](#potential-future-updates)
+* [Contact](#authors)
+* [Acknowledgements](#acknowledgments)
 
-### `yarn test`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this project I have developed a single page application for a Hospital with react and redux libraries. App name is BHAKTI HUSADA Hospital. A user can sign up/login to see the details of doctors and book an appointment.
 
-### `yarn build`
+App uses react router to route to different components. 
+Backend APIs are developed with Ruby on Rails. [Click here](https://github.com/taiwo2/appointment-backend.git) to see backend project details.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Live Link  -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Live Link
 
-### `yarn eject`
+[Click here](https://sleepy-ocean-62491.herokuapp.com/) to see live version
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- INSTALLATION -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run the app locally, clone the repository, navigate to it's directory.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Follow these commands step by step:-
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+git clone `https://github.com/taiwo2/appointment-frontend.git `<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+cd appointment-booking-frontend <br>
 
-### Code Splitting
+npm install <br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm start <br>
 
-### Analyzing the Bundle Size
+Now go to [localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- Test -->
 
-### Making a Progressive Web App
+## Test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To run unit test run `npm test` in root directory.
 
-### Advanced Configuration
+<!-- BUILD WITH -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Built With
 
-### Deployment
+- HTML/CSS
+- React
+- Redux
+- React Router
+- Bootstrap
+- CSS Modules
+- Axios
+- Eslint
+- Stylelint
+- ES6
+- NPM
+- React Alert
+- Font-Awesome
+- Heroku for Live version deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- Nice to have features -->
+
+## 'Nice to have features' that are implemented
+- User authentication using JWT
+- Responsive to mobile and desktop screens
+- React alert
+
+<!-- potential future updates -->
+
+## Potential Future Updates
+
+- Department-wise doctors list
+- Online fee payment
+- Doctor's available slots
+- Rendering Optimization
+
+<!-- CONTACT -->
+## Authors
+👤 Taiwo Adetona
+
+- Github: [@taiwo2](https://github.com/taiwo2)
+
+- LinkedIn: [Taiwo Adetona](https://www.linkedin.com/in/taiwo-adetona/)
+
+- Twitter: [@TaiwoAdetona4](https://twitter.com/TaiwoAdetona4/)
+
+<!-- acknowledgments -->
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Acknowledgments
+
+- [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for design
+- [Microverse](https://microverse.org)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
